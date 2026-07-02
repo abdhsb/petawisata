@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peta Wisata Maluku Utara</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Peta Wisata Maluku Utara</h1>
+      <p>Temukan destinasi wisata terbaik di Maluku Utara</p>
+    </header>
+    <div id="controls">
+      <div id="filter-container">
+        <label for="kategori-filter">Filter Kategori:</label>
+        <select id="kategori-filter">
+          <option value="">Semua Kategori</option>
+        </select>
+      </div>
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Cari destinasi..." />
+      </div>
+    </div>
+    <div id="main-content">
+      <div id="map"></div>
+      <div id="sidebar">
+        <h2>Destinasi Wisata</h2>
+        <div id="destination-list"></div>
+      </div>
+    </div>
+    <div id="modal" class="hidden">
+      <div id="modal-content">
+        <button id="modal-close">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
